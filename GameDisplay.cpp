@@ -7,7 +7,7 @@ GameDisplay::GameDisplay()
 
 GameDisplay::GameDisplay(const string &word)
 {
-    this->word = word;
+    this->word = word ;
 
     word_letters = new char [word.length() + 1];
     strcpy(word_letters, word.c_str());

@@ -5,6 +5,7 @@ int Game::count = 0;
 
 Game::Game()
 {
+    
 }
 
 Game::~Game()

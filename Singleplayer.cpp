@@ -2,6 +2,7 @@
 
 Singleplayer::Singleplayer(string& word) : Game(word)
 {
+    
 }
 
 void Singleplayer::SPlay(Player& player)

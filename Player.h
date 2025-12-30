@@ -15,6 +15,7 @@ class Player
         string GetPlayer();
         float GetPoints();
         int GetStreak();
+        
 };
 
 #endif

@@ -6,6 +6,7 @@ Player::Player(string player)
     this->player = player;
     points = 0;
     streak = 0;
+    
 }
 
 void Player::SetPoints(float points)

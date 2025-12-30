@@ -23,7 +23,7 @@ int main()
         switch(option)
         {
             case 1:
-                cout << "aaa\n" ;
+                cout << "aaa\n";
                 break;
 
             case 2:

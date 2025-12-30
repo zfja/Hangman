@@ -1,9 +1,8 @@
 #ifndef WORDBANK_H
 #define WORDBANK_H
-
-using namespace std;
 #include <iostream>
 #include <fstream>
+using namespace std;
 
 class WordBank
 {

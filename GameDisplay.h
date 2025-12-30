@@ -11,7 +11,7 @@ class GameDisplay
     string word;
     char *word_letters;
     char *letters_guessed;
-    vector <char> letters;
+    vector <char> letters ;
     public:
         GameDisplay();
         GameDisplay(const string &word);

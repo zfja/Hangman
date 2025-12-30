@@ -2,6 +2,7 @@
 
 Multiplayer::Multiplayer(string& word) : Game(word)
 {
+    
 }
 
 void Multiplayer::MPlay(Player& player)

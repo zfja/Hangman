@@ -8,7 +8,6 @@ class WordBank;
 
 class Singleplayer : public Game
 {
-    string word;
     public: 
         Singleplayer(string& word);
         void SPlay(Player& player);
