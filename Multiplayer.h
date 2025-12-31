@@ -8,7 +8,7 @@ class Multiplayer : public Game
     public: 
         Multiplayer(string& word);
         void MPlay(Player& player);
-        void MStats(Player player1, Player player2) ;
+        void MStats(Player player1, Player player2);
 };
 
 #endif

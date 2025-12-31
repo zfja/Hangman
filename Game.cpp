@@ -5,7 +5,7 @@ int Game::count = 0;
 
 Game::Game()
 {
-    
+
 }
 
 Game::~Game()
@@ -103,7 +103,7 @@ int Game::IsWon(const char& letter)
         display->Guessed(letter);
         display->Alphabeth(tries);
 
-        cout << "Wygrałeś! \n";
+        cout << "Wygrales! \n";
 
         return 1;
     }
@@ -113,12 +113,11 @@ int Game::IsWon(const char& letter)
         display->Guessed(letter);
         display->Alphabeth(tries);
 
-        cout << "Przegrałeś :( \n";
+        cout << "Przegralas :( \n";
 
         return 0;
     }
-    else
-        return -1;
+    return -1;
 }
 
 void Game::Reset()

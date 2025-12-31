@@ -14,7 +14,7 @@ class Game
     GameDisplay *display;
     float points_counter;
     static int count;
-    static int tries ;
+    static int tries;
     public:
         Game();
         ~Game();

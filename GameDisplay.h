@@ -2,16 +2,16 @@
 #define GAMEDISPLAY_H
 #include <iostream>
 #include <vector>
+#include <cstring>
 using namespace std;
 
 class Game;
 
 class GameDisplay
 {
-    string word;
     char *word_letters;
     char *letters_guessed;
-    vector <char> letters ;
+    vector <char> letters;
     public:
         GameDisplay();
         GameDisplay(const string &word);

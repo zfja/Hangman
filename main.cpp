@@ -17,7 +17,7 @@ int main()
     {
         system("clear");
         system("clear");
-        cout <<"\nWybierz:\n (1) Tryb singleplayer\n (2) Tryp multiplayer\n (3) Opcje\n (4) Wyjdź\n  > ";
+        cout <<"\nWybierz:\n (1) Tryb singleplayer\n (2) Tryp multiplayer\n (3) Opcje\n (4) Wyjdz\n  > ";
         cin >> option;
         
         switch(option)
@@ -34,11 +34,11 @@ int main()
                     float p1;
                     float p2;
 
-                    cout << "\nPodaj nazwę gracza 1: \n  > ";
+                    cout << "\nPodaj nazwe gracza 1: \n  > ";
                     cin >> player;
                     P1 = new Player(player);
 
-                    cout << "\nPodaj nazwę gracza 2: \n  > ";
+                    cout << "\nPodaj nazwe gracza 2: \n  > ";
                     cin >> player2;
                     cout << "\n";
                     P2 = new Player(player2);
@@ -50,7 +50,7 @@ int main()
                         p1 = P1->GetPoints();
                         p2 = P2->GetPoints();
 
-                        cout << "\nPodaj słowo dla " << player <<"!\n  > ";
+                        cout << "\nPodaj slowo dla " << player <<"!\n  > ";
                         cin >> word;
 
                         Game game1(word);
@@ -94,7 +94,7 @@ int main()
                 break;
 
             default:
-                cout << "Podano niepoprawną opcję.\n";
+                cout << "Podano niepoprawną opcje.\n";
                 break;
         }
     }while(option > 0 && option < 4);

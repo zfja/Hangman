@@ -7,8 +7,6 @@ GameDisplay::GameDisplay()
 
 GameDisplay::GameDisplay(const string &word)
 {
-    this->word = word ;
-
     word_letters = new char [word.length() + 1];
     strcpy(word_letters, word.c_str());
 
@@ -24,7 +22,6 @@ GameDisplay::~GameDisplay()
 {
     delete [] word_letters;
     delete [] letters_guessed;
-    letters.clear();
 }
 
 char * GameDisplay::GetWordLetters()
@@ -47,7 +44,7 @@ void GameDisplay::Stickman(int tries, float points)
             cout <<'\n'<<'\n'<<'\n'<<'\n'<<'\n'<<'\n';
             cout << '\n';
             cout << '\n';
-            cout << '\t' << "\tliczba pozostałych prob: " << 8 - tries << '\n';
+            cout << '\t' << "\tliczba pozostalych prob: " << 8 - tries << '\n';
             cout << '\t' << "\tpunkty: " << points << '\n';
             cout << '\n';
             cout << "==========\n \n";
@@ -57,7 +54,7 @@ void GameDisplay::Stickman(int tries, float points)
             cout <<'\n'<<'\n'<<'\n'<<'\n'<<'\n'<<'\n';
             cout << "   +----+\n";
             cout << "\t|\n";
-            cout << "\t|" << "\tliczba pozostałych prob: " << 8 - tries << '\n';
+            cout << "\t|" << "\tliczba pozostalych prob: " << 8 - tries << '\n';
             cout << "\t|" << "\tpunkty: " << points <<'\n';
             cout << "\t|\n";
             cout << "\t|\n";
@@ -68,7 +65,7 @@ void GameDisplay::Stickman(int tries, float points)
             cout <<'\n'<<'\n'<<'\n'<<'\n'<<'\n'<<'\n';
             cout << "   +----+\n";
             cout << "   |    |\n";
-            cout << "   O    |" << "\tliczba pozostałych prob: " << 8 - tries << '\n';
+            cout << "   O    |" << "\tliczba pozostalych prob: " << 8 - tries << '\n';
             cout << "\t|" << "\tpunkty: " << points << '\n';
             cout << "\t|\n";
             cout << "\t|\n";
@@ -79,7 +76,7 @@ void GameDisplay::Stickman(int tries, float points)
             cout <<'\n'<<'\n'<<'\n'<<'\n'<<'\n'<<'\n';
             cout << "   +----+\n";
             cout << "   |    |\n";
-            cout << "   O    |" << "\tliczba pozostałych prob: " << 8 - tries << '\n';
+            cout << "   O    |" << "\tliczba pozostalych prob: " << 8 - tries << '\n';
             cout << "   |    |" << "\tpunkty: " << points << '\n';
             cout << "\t|\n";
             cout << "\t|\n";
@@ -90,7 +87,7 @@ void GameDisplay::Stickman(int tries, float points)
             cout <<'\n'<<'\n'<<'\n'<<'\n'<<'\n'<<'\n';
             cout << "   +----+\n";
             cout << "   |    |\n";
-            cout << "   O    |" << "\tliczba pozostałych prob: " << 8 - tries << '\n';
+            cout << "   O    |" << "\tliczba pozostalych prob: " << 8 - tries << '\n';
             cout << "  /|    |" << "\tpunkty: " << points << '\n';
             cout << "\t|\n";
             cout << "\t|\n";
@@ -101,7 +98,7 @@ void GameDisplay::Stickman(int tries, float points)
             cout <<'\n'<<'\n'<<'\n'<<'\n'<<'\n'<<'\n';
             cout << "   +----+\n";
             cout << "   |    |\n";
-            cout << "   O    |" << "\tliczba pozostałych prob: " << 8 - tries << '\n';
+            cout << "   O    |" << "\tliczba pozostalych prob: " << 8 - tries << '\n';
             cout << "  /|\\   |" << "\tpunkty: " << points << '\n';
             cout << "\t|\n";
             cout << "\t|\n";
@@ -123,7 +120,7 @@ void GameDisplay::Stickman(int tries, float points)
             cout <<'\n'<<'\n'<<'\n'<<'\n'<<'\n'<<'\n';
             cout << "   +----+\n";
             cout << "   |    |\n";
-            cout << "   O    |" << "\tliczba pozostałych prob: " << 8 - tries << '\n';
+            cout << "   O    |" << "\tliczba pozostalych prob: " << 8 - tries << '\n';
             cout << "  /|\\   |" << "\tpunkty: " << points << '\n';
             cout << "  / \\   |\n";
             cout << "\t|\n";
@@ -137,7 +134,7 @@ void GameDisplay::Stickman(int tries, float points)
 
 void GameDisplay::Guessed(const char& letter)
 {
-    for (int i = 0; i < word.length(); i++)
+    for (int i = 0; i < strlen(word_letters) ; i++)
     {
         if (word_letters[i] == letter && letters_guessed[i] != letter)
             letters_guessed[i] = letter;
