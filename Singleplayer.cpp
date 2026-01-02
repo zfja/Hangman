@@ -2,7 +2,7 @@
 
 Singleplayer::Singleplayer(string& word) : Game(word)
 {
-    
+
 }
 
 void Singleplayer::SPlay(Player& player)
@@ -35,7 +35,7 @@ while(true)
 
 void Singleplayer::SStats(Player player)
 {
-    system("clear");
+    cout << "\033[2J\033[1;1H";    
     cout << "\n \n   ";
     cout << player.GetPlayer() << "\n ";
     cout << "punkty skumulowane: " << player.GetPoints() << "\n ";

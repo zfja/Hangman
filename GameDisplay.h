@@ -5,8 +5,6 @@
 #include <cstring>
 using namespace std;
 
-class Game;
-
 class GameDisplay
 {
     char *word_letters;
@@ -21,8 +19,8 @@ class GameDisplay
         void Stickman(int tries, float points);
         void Guessed(const char& letter);
         vector <char> GetAlphabeth();
-        void Alphabeth(const char& letter);
-        void Alphabeth();
+        void Alphabet(const char& letter);
+        void Alphabet();
 };
 
 #endif

@@ -39,8 +39,7 @@ void GameDisplay::Stickman(int tries, float points)
     switch(tries)
     {
         case 0:
-            system("clear");
-            system("clear");
+            cout << "\033[2J\033[1;1H";
             cout <<'\n'<<'\n'<<'\n'<<'\n'<<'\n'<<'\n';
             cout << '\n';
             cout << '\n';
@@ -50,7 +49,7 @@ void GameDisplay::Stickman(int tries, float points)
             cout << "==========\n \n";
             break;
         case 1:
-            system("clear");
+            cout << "\033[2J\033[1;1H";
             cout <<'\n'<<'\n'<<'\n'<<'\n'<<'\n'<<'\n';
             cout << "   +----+\n";
             cout << "\t|\n";
@@ -61,7 +60,7 @@ void GameDisplay::Stickman(int tries, float points)
             cout << "==========\n  \n";
             break;
         case 2:
-            system("clear");
+            cout << "\033[2J\033[1;1H";
             cout <<'\n'<<'\n'<<'\n'<<'\n'<<'\n'<<'\n';
             cout << "   +----+\n";
             cout << "   |    |\n";
@@ -72,7 +71,7 @@ void GameDisplay::Stickman(int tries, float points)
             cout << "==========\n \n"; 
             break;
         case 3:
-            system("clear");
+            cout << "\033[2J\033[1;1H";
             cout <<'\n'<<'\n'<<'\n'<<'\n'<<'\n'<<'\n';
             cout << "   +----+\n";
             cout << "   |    |\n";
@@ -83,7 +82,7 @@ void GameDisplay::Stickman(int tries, float points)
             cout << "==========\n \n"; 
             break;
         case 4:
-            system("clear");
+            cout << "\033[2J\033[1;1H";
             cout <<'\n'<<'\n'<<'\n'<<'\n'<<'\n'<<'\n';
             cout << "   +----+\n";
             cout << "   |    |\n";
@@ -94,7 +93,7 @@ void GameDisplay::Stickman(int tries, float points)
             cout << "==========\n \n"; 
             break;
         case 5:
-            system("clear");
+            cout << "\033[2J\033[1;1H";
             cout <<'\n'<<'\n'<<'\n'<<'\n'<<'\n'<<'\n';
             cout << "   +----+\n";
             cout << "   |    |\n";
@@ -105,7 +104,7 @@ void GameDisplay::Stickman(int tries, float points)
             cout << "==========\n \n"; 
             break;      
         case 6:
-            system("clear");
+            cout << "\033[2J\033[1;1H";
             cout <<'\n'<<'\n'<<'\n'<<'\n'<<'\n'<<'\n';
             cout << "   +----+\n";
             cout << "   |    |\n";
@@ -116,7 +115,7 @@ void GameDisplay::Stickman(int tries, float points)
             cout << "==========\n \n"; 
             break;
         case 7:
-            system("clear");
+            cout << "\033[2J\033[1;1H";
             cout <<'\n'<<'\n'<<'\n'<<'\n'<<'\n'<<'\n';
             cout << "   +----+\n";
             cout << "   |    |\n";
@@ -149,7 +148,7 @@ vector <char> GameDisplay::GetAlphabeth()
     return letters;
 }
 
-void GameDisplay::Alphabeth(const char& letter)
+void GameDisplay::Alphabet(const char& letter)
 {
     bool exists;
 
@@ -173,7 +172,7 @@ void GameDisplay::Alphabeth(const char& letter)
     cout << '\n' << '\n' << "  > ";
 }
 
-void GameDisplay::Alphabeth()
+void GameDisplay::Alphabet()
 {
     cout << '\n';
     for (int i = 0; i < letters.size(); i++)

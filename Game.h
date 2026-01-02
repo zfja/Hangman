@@ -6,7 +6,6 @@
 using namespace std;
 
 class GameDisplay;
-class Player;
 
 class Game
 {

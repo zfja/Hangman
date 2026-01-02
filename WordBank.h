@@ -2,17 +2,18 @@
 #define WORDBANK_H
 #include <iostream>
 #include <fstream>
+#include <dirent.h>
 using namespace std;
 
 class WordBank
 {
-    string *genres;
+    vector <string> categories;
     string word;
     public:
         WordBank();
         void ReturnGenres();
-        string GetWord();
-        void AddWord(const string& filename);
+        string GetWord(const string& category);
+        void AddWord(const string& category);
 };
 
 #endif

@@ -4,8 +4,6 @@
 #include "WordBank.h"
 using namespace std;
 
-class WordBank;
-
 class Singleplayer : public Game
 {
     public: 

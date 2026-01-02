@@ -8,31 +8,71 @@
 int main()
 {
     int option = 0;
-    string player, player2, word;
-
-    Player *P1(nullptr);
-    Player *P2(nullptr);
+    string player, word;
+    cout << "\033[2J\033[1;1H";
 
     do
     {
-        system("clear");
-        system("clear");
         cout <<"\nWybierz:\n (1) Tryb singleplayer\n (2) Tryp multiplayer\n (3) Opcje\n (4) Wyjdz\n  > ";
         cin >> option;
         
         switch(option)
         {
             case 1:
-                cout << "aaa\n";
-                break;
+                {
+                    int opt;
+                    float p;
+                
+                    Player *P(nullptr);
+                    cout << "\nPodaj nazwe gracza: \n  > ";
+                    cin >> player;
+                    P = new Player(player);
+
+                    WordBank wordbank;
+                    wordbank.ReturnGenres();
+
+                    
+
+                    // do
+                    // {   
+                    //     p = P->GetPoints();
+
+                    //     cout << "\nPodaj slowo dla " << player <<"!\n  > ";
+                    //     cin >> word;
+
+                    //     Game game(word);
+                    //     Singleplayer singleplayer(word);
+                    //     singleplayer.SPlay(*P);
+                    //     game.Reset();
+
+                    //     P->SetPoints(p + P->GetPoints());
+
+                    //     singleplayer.SStats(*P);
+
+                    //     do
+                    //     {
+                    //         cout <<"\n \nGrasz dalej?\n (1) Tak\n (2) Nie\n  > ";
+                    //         cin >> opt;
+
+                    //         if (opt != 1 && opt != 2)
+                    //             cout << "Podano niepoprawną opcję.\n";
+
+                    //     }while (opt != 1 && opt != 2);
+
+                    // }while(opt != 2);
+                
+                    break;
+                }
 
             case 2:
                 {
                     int opt;
-                    int games_played = 0;
+                    float p1, p2;
+                    string player2;
 
-                    float p1;
-                    float p2;
+
+                    Player *P1(nullptr);
+                    Player *P2(nullptr);
 
                     cout << "\nPodaj nazwe gracza 1: \n  > ";
                     cin >> player;
@@ -43,7 +83,7 @@ int main()
                     cout << "\n";
                     P2 = new Player(player2);
 
-                    system("clear");
+                    cout << "\033[2J\033[1;1H";
 
                     do
                     {   

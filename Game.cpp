@@ -26,7 +26,7 @@ Game::Game(string& word)
     display = new GameDisplay(this->word);
     display->Stickman(0, points_counter);
     display->Guessed(' ');
-    display->Alphabeth();
+    display->Alphabet();
 }
 
 float Game::GetPointsCounter()
@@ -74,23 +74,23 @@ void Game::Play(const char& letter)
         {
             display->Stickman(tries, points_counter);   
             display->Guessed(letter);
-            display->Alphabeth();
+            display->Alphabet();
 
         }
         if (IsTrue(letter) == 0) // bledna litera
         {
             tries++;
-            points_counter -= tries * 11.11;
+            points_counter -= tries * 5.21;
             display->Stickman(tries, points_counter);   
             display->Guessed(letter);
-            display->Alphabeth(letter);
+            display->Alphabet(letter);
         }
         if (IsTrue(letter) > 0) // poprawna litera
         {
             points_counter += IsTrue(letter) * word.length() * 21.37;
             display->Stickman(tries, points_counter);
             display->Guessed(letter);
-            display->Alphabeth();
+            display->Alphabet();
         }
     }
 }
@@ -101,7 +101,7 @@ int Game::IsWon(const char& letter)
     {            
         display->Stickman(tries, points_counter);
         display->Guessed(letter);
-        display->Alphabeth(tries);
+        display->Alphabet(tries);
 
         cout << "Wygrales! \n";
 
@@ -111,7 +111,7 @@ int Game::IsWon(const char& letter)
     {
         display->Stickman(7, points_counter);   
         display->Guessed(letter);
-        display->Alphabeth(tries);
+        display->Alphabet(tries);
 
         cout << "Przegralas :( \n";
 
