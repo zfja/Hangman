@@ -20,16 +20,19 @@ int main()
         {
             case 1:
                 {
-                    int opt;
-                    float p;
+                    cout << "WYBRANO 1 OPCJE\n";
+                    return 0;
+                    
+                    // int opt;
+                    // float p;
                 
-                    Player *P(nullptr);
-                    cout << "\nPodaj nazwe gracza: \n  > ";
-                    cin >> player;
-                    P = new Player(player);
+                    // Player *P(nullptr);
+                    // cout << "\nPodaj nazwe gracza: \n  > ";
+                    // cin >> player;
+                    // P = new Player(player);
 
-                    WordBank wordbank;
-                    wordbank.ReturnGenres();
+                    // WordBank wordbank;
+                    // wordbank.ReturnGenres();
 
                     
 
@@ -127,7 +130,9 @@ int main()
                 }
 
             case 3:
-                cout << "aaa\n" ;
+                cout << "WYBRANO 1 OPCJE\n";
+                return 0;
+                
                 break;
 
             case 4:
