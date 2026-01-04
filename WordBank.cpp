@@ -14,7 +14,6 @@ WordBank::WordBank()
     }
 
     closedir(dir);
-    
 }
 
 void WordBank::ReturnGenres()
@@ -48,4 +47,19 @@ void WordBank::AddWord(const string& category, const string& word)
     ofile.open(category, ios_base::app);
     ofile << '\n' << i/2 + 1 << " " + word;
     ofile.close();
+}
+
+void WordBank::AddCategory(const string& category)
+{
+    for (int i = 0; i < categories.size(); i++)
+    {
+        if (categories[i].substr(0, categories[i].size() - 4) == category)
+        {
+            cout << "Podana kategoria juz istnieje!\n";
+            return;
+        }    
+    }
+    
+    ofstream(category+".txt");
+    categories.push_back(category+".txt");
 }

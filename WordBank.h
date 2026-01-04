@@ -15,6 +15,7 @@ class WordBank
         string ReturnGenre(int i);
         string GetWord(const string& category);
         void AddWord(const string& category, const string& word);
+        void AddCategory(const string& category);
 };
 
 #endif

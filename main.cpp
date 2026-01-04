@@ -141,14 +141,40 @@ int main()
                     {
                         case 1:
                         {
+                            int optt = 0;
+                            do
+                            {
+                                string category;
+                                cout << "\n \nObecnie istniejace kategorie: \n";
+                                wordbank.ReturnGenres();
+
+                                cout << "\n \nPodaj kategorie, ktora chcesz dodac:\n  > ";
+                                cin >> category;
+
+                                wordbank.AddCategory(category);
+
+                                cout << "\n \nObecnie istniejace kategorie: \n";
+                                wordbank.ReturnGenres();
+
+                                do
+                                {
+                                    cout <<"\n \nCzy chcesz wprowadzic jeszcze jakies zmiany?\n (1) Tak\n (2) Nie\n  > ";
+                                    cin >> optt;
+
+                                    if (optt != 1 && optt != 2)
+                                        cout << "Podano niepoprawną opcję.\n";
+
+                                } while (optt != 1 && optt != 2);
+                                
+                            } while (optt == 1);
                             
                             break;
                         }
                         case 2:
                         {
+                            int optt = 0;
                             do
                             {
-                                int opt = 0;
                                 string word;
                                 int i;
                                 cout << "\n \nObecnie istniejace kategorie: \n";
@@ -163,14 +189,14 @@ int main()
                                 do
                                 {
                                     cout <<"\n \nCzy chcesz wprowadzic jeszcze jakies zmiany?\n (1) Tak\n (2) Nie\n  > ";
-                                    cin >> opt;
+                                    cin >> optt;
 
-                                    if (opt != 1 && opt != 2)
+                                    if (optt != 1 && optt != 2)
                                         cout << "Podano niepoprawną opcję.\n";
 
-                                } while (opt != 1 && opt != 2);
+                                } while (optt != 1 && optt != 2);
                                 
-                            } while (opt != 1);
+                            } while (optt == 1);
                             
                             break;
                         }
@@ -186,8 +212,6 @@ int main()
                         cout << "Podano niepoprawną opcję.\n";
 
                 }while (opt != 1 && opt != 2 && opt != 3);
-
-                
 
                 break;
             }
