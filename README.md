@@ -1,6 +1,6 @@
 #  Hangman Game - Console Edition
 
-A feature-rich console implementation of the classic Hangman game in C++ with object-oriented design and multiplayer support.
+Console implementation of the classic Hangman game in C++ with object-oriented design and multiplayer support.
 
 ##  Features
 
