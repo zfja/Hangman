@@ -61,6 +61,9 @@ The game automatically loads words from `.txt` files in the program directory:
 
 ### File format:
 1 dog
+
 2 computer
+
 3 apple
+
 ...
