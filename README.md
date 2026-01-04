@@ -28,7 +28,7 @@ A feature-rich console implementation of the classic Hangman game in C++ with ob
 - `apple` →  **CORRECT** 
 - `APPLE` →  **CORRECT** 
 - `ApPlE` →  **CORRECT** 
-- `apply` →  **PARTIALLY CORRECT**** (While y is flagged as incorrect, all other letters in the guess are validated as correct.)
+- `apply` →  **PARTIALLY CORRECT** (While `y` is flagged as incorrect, all other letters in the guess are validated as correct.)
 
 **Gameplay Impact:**
 - Full-word guesses immediately win the game if correct
