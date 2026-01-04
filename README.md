@@ -30,10 +30,6 @@ Console implementation of the classic Hangman game in C++ with object-oriented d
 - `ApPlE` →  **CORRECT** 
 - `apply` →  **PARTIALLY CORRECT** (While `y` is flagged as incorrect, all other letters in the guess are validated as correct.)
 
-### Technical Details:
-- Words in `.txt` files should be in lowercase
-- Display shows words in their original format, but guessing is case-insensitive
-
 ## IMPORTANT: Word Input Restriction
 
 ### **CRITICAL LIMITATION:**
