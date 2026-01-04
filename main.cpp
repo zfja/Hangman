@@ -8,11 +8,11 @@
 int main()
 {
     int option = 0;
-    string player, word;
-    cout << "\033[2J\033[1;1H";
+    string player, word ;
 
     do
     {
+        cout << "\033[2J\033[1;1H";
         cout <<"\nWybierz:\n (1) Tryb singleplayer\n (2) Tryp multiplayer\n (3) Opcje\n (4) Wyjdz\n  > ";
         cin >> option;
         
@@ -20,49 +20,47 @@ int main()
         {
             case 1:
                 {
-                    cout << "WYBRANO 1 OPCJE\n";
-                    return 0;
-                    
-                    // int opt;
-                    // float p;
+                    int opt;
+                    float p;
                 
-                    // Player *P(nullptr);
-                    // cout << "\nPodaj nazwe gracza: \n  > ";
-                    // cin >> player;
-                    // P = new Player(player);
+                    Player *P(nullptr);
+                    cout << "\nPodaj nazwe gracza: \n  > ";
+                    cin >> player;
+                    P = new Player(player);
+                    cout <<"\nWybierz kategorię:\n";
 
-                    // WordBank wordbank;
-                    // wordbank.ReturnGenres();
+                    WordBank wordbank;
+                    wordbank.ReturnGenres();
+                    cout << "  \n  > ";
+                    wordbank.AddWord("Zawody.txt", "naukowiec");
 
-                    
+                    do
+                    {   
+                        p = P->GetPoints();
 
-                    // do
-                    // {   
-                    //     p = P->GetPoints();
+                        cout << "\nPodaj slowo dla " << player <<"!\n  > ";
+                        cin >> word;
 
-                    //     cout << "\nPodaj slowo dla " << player <<"!\n  > ";
-                    //     cin >> word;
+                        Game game(word);
+                        Singleplayer singleplayer(word);
+                        singleplayer.SPlay(*P);
+                        game.Reset();
 
-                    //     Game game(word);
-                    //     Singleplayer singleplayer(word);
-                    //     singleplayer.SPlay(*P);
-                    //     game.Reset();
+                        P->SetPoints(p + P->GetPoints());
 
-                    //     P->SetPoints(p + P->GetPoints());
+                        singleplayer.SStats(*P);
 
-                    //     singleplayer.SStats(*P);
+                        do
+                        {
+                            cout <<"\n \nGrasz dalej?\n (1) Tak\n (2) Nie\n  > ";
+                            cin >> opt;
 
-                    //     do
-                    //     {
-                    //         cout <<"\n \nGrasz dalej?\n (1) Tak\n (2) Nie\n  > ";
-                    //         cin >> opt;
+                            if (opt != 1 && opt != 2)
+                                cout << "Podano niepoprawną opcję.\n";
 
-                    //         if (opt != 1 && opt != 2)
-                    //             cout << "Podano niepoprawną opcję.\n";
+                        }while (opt != 1 && opt != 2);
 
-                    //     }while (opt != 1 && opt != 2);
-
-                    // }while(opt != 2);
+                    }while(opt != 2);
                 
                     break;
                 }
@@ -130,10 +128,69 @@ int main()
                 }
 
             case 3:
-                cout << "WYBRANO 1 OPCJE\n";
-                return 0;
+            {
+                int opt;
+                WordBank wordbank;
+
+                do
+                {
+                    cout <<"\n \nWybierz opcje:\n (1) Dodaj nowa kategorie\n (2) Dodaj slowo do istniejacej kategori\n (3) Wyjdz\n  > ";
+                    cin >> opt;
+
+                    switch(opt)
+                    {
+                        case 1:
+                        {
+                            
+                            break;
+                        }
+                        case 2:
+                        {
+                            do
+                            {
+                                int opt = 0;
+                                string word;
+                                int i;
+                                cout << "\n \nObecnie istniejace kategorie: \n";
+                                wordbank.ReturnGenres();
+                                cout << "\n \nDo ktorej kategorii chcesz dodac slowo:\n  > ";
+                                cin >> i;
+                                cout << "\n \nPodaj slowo ktore chcesz dodac:\n  > ";
+                                cin >> word;
+
+                                wordbank.AddWord(wordbank.ReturnGenre(i-1), word);
+                                
+                                do
+                                {
+                                    cout <<"\n \nCzy chcesz wprowadzic jeszcze jakies zmiany?\n (1) Tak\n (2) Nie\n  > ";
+                                    cin >> opt;
+
+                                    if (opt != 1 && opt != 2)
+                                        cout << "Podano niepoprawną opcję.\n";
+
+                                } while (opt != 1 && opt != 2);
+                                
+                            } while (opt != 1);
+                            
+                            break;
+                        }
+
+                        case 3:
+                            break;
+
+                        default:
+                            break;
+                    }
+
+                    if (opt != 1 && opt != 2 && opt != 3)
+                        cout << "Podano niepoprawną opcję.\n";
+
+                }while (opt != 1 && opt != 2 && opt != 3);
+
                 
+
                 break;
+            }
 
             case 4:
                 break;

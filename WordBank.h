@@ -12,8 +12,9 @@ class WordBank
     public:
         WordBank();
         void ReturnGenres();
+        string ReturnGenre(int i);
         string GetWord(const string& category);
-        void AddWord(const string& category);
+        void AddWord(const string& category, const string& word);
 };
 
 #endif
