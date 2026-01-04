@@ -30,17 +30,9 @@ Console implementation of the classic Hangman game in C++ with object-oriented d
 - `ApPlE` →  **CORRECT** 
 - `apply` →  **PARTIALLY CORRECT** (While `y` is flagged as incorrect, all other letters in the guess are validated as correct.)
 
-**Gameplay Impact:**
-- Full-word guesses immediately win the game if correct
-- Full-word guesses count as a single attempt
-- Strategic choice between cautious (letter-by-letter) and bold (full-word) playstyles
-
 ### Technical Details:
-- All player input is normalized using `tolower()`
 - Words in `.txt` files should be in lowercase
 - Display shows words in their original format, but guessing is case-insensitive
-
-**Tip:** Always use lowercase letters when guessing for consistency!
 
 ## IMPORTANT: Word Input Restriction
 
