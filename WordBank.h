@@ -3,6 +3,7 @@
 #include <iostream>
 #include <fstream>
 #include <dirent.h>
+#include <ctime>
 using namespace std;
 
 class WordBank
@@ -13,8 +14,9 @@ class WordBank
         WordBank();
         void ReturnGenres();
         string ReturnGenre(int i);
-        string GetWord(const string& category);
+        string GetRandomWord(int i);
         void AddWord(const string& category, const string& word);
+        int CategorySize(const string& category);
         void AddCategory(const string& category);
 };
 

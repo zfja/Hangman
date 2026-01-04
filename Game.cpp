@@ -5,13 +5,11 @@ int Game::count = 0;
 
 Game::Game()
 {
-
 }
 
 Game::~Game()
 {
     delete display;
-
 }
 
 Game::Game(string& word)

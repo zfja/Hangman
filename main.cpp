@@ -21,6 +21,7 @@ int main()
             case 1:
                 {
                     int opt;
+                    int genre;
                     float p;
                 
                     Player *P(nullptr);
@@ -32,14 +33,16 @@ int main()
                     WordBank wordbank;
                     wordbank.ReturnGenres();
                     cout << "  \n  > ";
-                    wordbank.AddWord("Zawody.txt", "naukowiec");
+                    cin >> genre;
+                    
+                    cout << "\033[2J\033[1;1H";
 
                     do
                     {   
                         p = P->GetPoints();
-
-                        cout << "\nPodaj slowo dla " << player <<"!\n  > ";
-                        cin >> word;
+                        
+                        string word;
+                        word = wordbank.GetRandomWord(genre);
 
                         Game game(word);
                         Singleplayer singleplayer(word);
@@ -52,15 +55,23 @@ int main()
 
                         do
                         {
-                            cout <<"\n \nGrasz dalej?\n (1) Tak\n (2) Nie\n  > ";
+                            cout <<"\n \nGrasz dalej?\n (1) Tak\n (2) Tak, ale zmien kategorie\n (3) Nie\n  > ";
                             cin >> opt;
 
-                            if (opt != 1 && opt != 2)
+                            if (opt != 1 && opt != 2 && opt != 3)
                                 cout << "Podano niepoprawną opcję.\n";
 
-                        }while (opt != 1 && opt != 2);
+                            if (opt == 2)
+                            {
+                                cout <<"\nWybierz kategorię:\n";
+                                wordbank.ReturnGenres();
+                                cout << "  \n  > ";
+                                cin >> genre;
+                            }
 
-                    }while(opt != 2);
+                        }while (opt != 1 && opt != 2 && opt != 3);
+
+                    }while(opt != 3);
                 
                     break;
                 }
@@ -131,6 +142,7 @@ int main()
             {
                 int opt;
                 WordBank wordbank;
+                cout << "\033[2J\033[1;1H";
 
                 do
                 {
@@ -158,6 +170,7 @@ int main()
 
                                 do
                                 {
+                                    cout << "\033[2J\033[1;1H";
                                     cout <<"\n \nCzy chcesz wprowadzic jeszcze jakies zmiany?\n (1) Tak\n (2) Nie\n  > ";
                                     cin >> optt;
 
@@ -184,10 +197,11 @@ int main()
                                 cout << "\n \nPodaj slowo ktore chcesz dodac:\n  > ";
                                 cin >> word;
 
-                                wordbank.AddWord(wordbank.ReturnGenre(i-1), word);
+                                wordbank.AddWord(wordbank.ReturnGenre(i), word);
                                 
                                 do
                                 {
+                                    cout << "\033[2J\033[1;1H";
                                     cout <<"\n \nCzy chcesz wprowadzic jeszcze jakies zmiany?\n (1) Tak\n (2) Nie\n  > ";
                                     cin >> optt;
 
@@ -200,7 +214,6 @@ int main()
                             
                             break;
                         }
-
                         case 3:
                             break;
 
