@@ -54,10 +54,10 @@ The program **CANNOT HANDLE WORDS WITH SPACES** and will crash if you try to use
 The game automatically loads words from `.txt` files in the program directory:
 
 ### Recommended files:
-- `zwierzeta.txt` 
-- `geografia.txt` 
-- `marki.txt` 
-- `zawody.txt` 
+- `Zwierzeta.txt` 
+- `Geografia.txt` 
+- `Marki.txt` 
+- `Zawody.txt` 
 
 ### File format:
 1 dog
