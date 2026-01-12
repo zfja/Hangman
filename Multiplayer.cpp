@@ -10,8 +10,8 @@ void Multiplayer::MPlay(Player& player)
     while(true)
     {
         char letter;
-        float p;
         cin >> letter;
+        cin.ignore(100, '\n');
 
         letter = toupper(letter);
 

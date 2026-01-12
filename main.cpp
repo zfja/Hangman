@@ -27,6 +27,7 @@ int main()
                     Player *P(nullptr);
                     cout << "\nPodaj nazwe gracza: \n  > ";
                     cin >> player;
+                    cin.ignore(100, '\n');
                     P = new Player(player);
                     cout <<"\nWybierz kategorię:\n";
 
@@ -46,6 +47,7 @@ int main()
 
                         Game game(word);
                         Singleplayer singleplayer(word);
+                        cin.ignore();
                         singleplayer.SPlay(*P);
                         game.Reset();
 
@@ -88,10 +90,12 @@ int main()
 
                     cout << "\nPodaj nazwe gracza 1: \n  > ";
                     cin >> player;
+                    cin.ignore(100, '\n');
                     P1 = new Player(player);
 
                     cout << "\nPodaj nazwe gracza 2: \n  > ";
                     cin >> player2;
+                    cin.ignore(100, '\n');
                     cout << "\n";
                     P2 = new Player(player2);
 
@@ -104,6 +108,7 @@ int main()
 
                         cout << "\nPodaj slowo dla " << player <<"!\n  > ";
                         cin >> word;
+                        cin.ignore(100, '\n');
 
                         Game game1(word);
                         Multiplayer multiplayer1(word);
@@ -112,9 +117,11 @@ int main()
 
                         cout << "\nPodaj słowo dla " << player2 <<"!\n  > ";
                         cin >> word;
+                        cin.ignore(100, '\n');
                             
                         Game game2(word);
                         Multiplayer multiplayer2(word);
+                        cin.ignore();
                         multiplayer2.MPlay(*P2);
                         game2.Reset();
 
