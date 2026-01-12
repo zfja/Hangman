@@ -1,0 +1,77 @@
+# ========================
+# PLIKI KOMPILACJI C++
+# ========================
+*.o
+*.obj
+*.out
+*.exe
+prog
+a.out
+*.gcno
+*.gcda
+
+# ========================
+# FOLDERY BUDOWANIA
+# ========================
+build/
+bin/
+dist/
+Debug/
+Release/
+*.vcxproj.*
+*.sln
+
+# ========================
+# PLIKI SYSTEMOWE
+# ========================
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+*.swp
+*.swo
+*~
+
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ========================
+# PLIKI WYGRENEROWANE
+# ========================
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# CLion
+.idea/
+*.iml
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# ========================
+# PLIKI DANYCH/LOGÓW
+# ========================
+*.log
+*.tmp
+*.temp
+*.pid
+
+# ========================
+# SPECJALNE DLA TWOJEGO PROJEKTU
+# ========================
+# Pliki txt możesz commitować, ale jeśli są duże, możesz je ignorować
+# *.txt
+
+# Pliki binarne (jeśli jakieś masz)
+*.bin
+*.dat
