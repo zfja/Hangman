@@ -1,4 +1,25 @@
 # ========================
+# SYSTEM macOS
+# ========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+*~
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ========================
 # PLIKI KOMPILACJI C++
 # ========================
 *.o
@@ -9,6 +30,9 @@ prog
 a.out
 *.gcno
 *.gcda
+*.ilk
+*.pdb
+*.map
 
 # ========================
 # FOLDERY BUDOWANIA
@@ -20,27 +44,12 @@ Debug/
 Release/
 *.vcxproj.*
 *.sln
+out/
+x64/
+x86/
 
 # ========================
-# PLIKI SYSTEMOWE
-# ========================
-# macOS
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-*.swp
-*.swo
-*~
-
-# Windows
-Thumbs.db
-Desktop.ini
-$RECYCLE.BIN/
-
-# ========================
-# PLIKI WYGRENEROWANE
+# IDE I EDYTORY
 # ========================
 # VS Code
 .vscode/
@@ -48,30 +57,36 @@ $RECYCLE.BIN/
 !.vscode/tasks.json
 !.vscode/launch.json
 
-# CLion
+# CLion / IntelliJ
 .idea/
 *.iml
+*.iws
+*.ipr
 
 # CMake
 CMakeCache.txt
 CMakeFiles/
 cmake_install.cmake
 Makefile
+compile_commands.json
 
 # ========================
-# PLIKI DANYCH/LOGÓW
+# TYMCZASOWE I LOGI
 # ========================
 *.log
 *.tmp
 *.temp
 *.pid
+*.seed
 
 # ========================
-# SPECJALNE DLA TWOJEGO PROJEKTU
+# SPECJALNIE DLA TWOJEGO PROJEKTU
 # ========================
-# Pliki txt możesz commitować, ale jeśli są duże, możesz je ignorować
-# *.txt
+# Pliki wykonywalne
+prog
+*.exe
+*.out
 
-# Pliki binarne (jeśli jakieś masz)
-*.bin
-*.dat
+# Backup plików
+*.bak
+*.backup
