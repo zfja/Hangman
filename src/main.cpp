@@ -176,7 +176,7 @@ int main()
                                 cout << "\n \nObecnie istniejace kategorie: \n";
                                 wordbank.ReturnGenres();
 
-                                cout << "\n \nPodaj kategorie, ktora chcesz dodac:\n  > ";
+                                cout << "\n \nPodaj nazwe kategorie, ktora chcesz dodac:\n  > ";
                                 cin >> category;
 
                                 wordbank.AddCategory(category);
@@ -212,6 +212,7 @@ int main()
                                 cin >> i;
                                 cout << "\n \nPodaj slowo ktore chcesz dodac:\n  > ";
                                 cin >> word;
+                                cin.ignore(1000, '\n');
 
                                 wordbank.AddWord(wordbank.ReturnGenre(i), word);
                                 
