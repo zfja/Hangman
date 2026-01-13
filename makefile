@@ -7,16 +7,16 @@ OBJECTS = $(SOURCES:.cpp=.o)
 
 all: $(TARGET)
 
-# REGUŁA DLA PLIKU WYKONYWALNEGO
 $(TARGET): $(OBJECTS)
 	$(CXX) $(OBJECTS) -o $(TARGET)
 
-# REGUŁA DLA PLIKÓW .o - BRAKUJĄCA!
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(TARGET) $(OBJECTS)
+
+clear: clean
 
 run: $(TARGET)
 	./$(TARGET)
