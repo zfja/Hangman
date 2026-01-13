@@ -16,11 +16,11 @@ class GameDisplay
         ~GameDisplay();
         char *GetWordLetters();
         char *GetLettersGuessed();
-        void Stickman(int tries, float points);
-        void Guessed(const char& letter);
+        //void Stickman(int tries, float points);
+        //void Guessed(const char& letter);
         vector <char> GetAlphabeth();
-        void Alphabet(const char& letter);
-        void Alphabet();
+        //void Alphabet(const char& letter);
+        //void Alphabet();
 };
 
 #endif

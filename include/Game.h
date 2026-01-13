@@ -1,19 +1,19 @@
 #ifndef GAME_H
 #define GAME_H
-#include "GameDisplay.h"
 #include "Player.h"
 #include <cctype>
 using namespace std;
 
-class GameDisplay;
-
 class Game
 {
     string word;
-    GameDisplay *display;
     float points_counter;
     static int count;
     static int tries;
+
+    char *word_letters;
+    char *letters_guessed;
+    vector <char> letters;
     public:
         Game();
         ~Game();
@@ -24,6 +24,11 @@ class Game
         void Play(const char& letter);
         int IsWon(const char& letter);
         void Reset();
+
+        void Alphabet(const char& letter);
+        void Alphabet();
+        void Guessed(const char& letter);
+        void Stickman(int tries, float points);
 };
 
 #endif

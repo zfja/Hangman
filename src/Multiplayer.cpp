@@ -11,7 +11,7 @@ void Multiplayer::MPlay(Player& player)
     {
         char letter;
         cin >> letter;
-        cin.ignore(100, '\n');
+        cin.ignore(1000, '\n');
 
         letter = toupper(letter);
 

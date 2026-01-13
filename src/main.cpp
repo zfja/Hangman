@@ -1,4 +1,3 @@
-#include "GameDisplay.h"
 #include "Game.h"
 #include "Player.h"
 #include "Multiplayer.h"
@@ -9,10 +8,10 @@ int main()
 {
     int option = 0;
     string player, word ;
+    cout << "\033[2J\033[1;1H";
 
     do
     {
-        cout << "\033[2J\033[1;1H";
         cout <<"\nWybierz:\n (1) Tryb singleplayer\n (2) Tryp multiplayer\n (3) Opcje\n (4) Wyjdz\n  > ";
         cin >> option;
         
@@ -70,6 +69,8 @@ int main()
                                 cout << "  \n  > ";
                                 cin >> genre;
                             }
+                            if (opt == 3)
+                                cout << "Gracz " << P->GetPlayer() << " wygrał!\n"; 
 
                         }while (opt != 1 && opt != 2 && opt != 3);
 
@@ -108,7 +109,7 @@ int main()
 
                         cout << "\nPodaj slowo dla " << player <<"!\n  > ";
                         cin >> word;
-                        cin.ignore(100, '\n');
+                        cin.ignore(1000, '\n');
 
                         Game game1(word);
                         Multiplayer multiplayer1(word);
@@ -117,7 +118,6 @@ int main()
 
                         cout << "\nPodaj słowo dla " << player2 <<"!\n  > ";
                         cin >> word;
-                        cin.ignore(100, '\n');
                             
                         Game game2(word);
                         Multiplayer multiplayer2(word);
@@ -138,10 +138,19 @@ int main()
                             if (opt != 1 && opt != 2)
                                 cout << "Podano niepoprawną opcję.\n";
 
+                            if (opt == 2)
+                            {
+                                cout << '\n';
+                                if (P1->GetPoints() > P2 ->GetPoints())
+                                    cout << "Gracz " << P1->GetPlayer() << " wygrał!\n"; 
+                                else if (P1->GetPoints() < P2 ->GetPoints())
+                                    cout << "Gracz " << P2->GetPlayer() << " wygrał!\n"; 
+                            }
+
                         }while (opt != 1 && opt != 2);
 
                     }while(opt != 2);
-                
+                    
                     break;
                 }
 
@@ -218,7 +227,8 @@ int main()
                                 } while (optt != 1 && optt != 2);
                                 
                             } while (optt == 1);
-                            
+
+                            cout << "\033[2J\033[1;1H";
                             break;
                         }
                         case 3:
