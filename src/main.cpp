@@ -28,7 +28,7 @@ int main()
                     cin >> player;
                     cin.ignore(100, '\n');
                     P = new Player(player);
-                    cout <<"\nWybierz kategorię:\n";
+                    cout <<"\nWybierz kategorie:\n";
 
                     WordBank wordbank;
                     wordbank.ReturnGenres();
@@ -64,14 +64,11 @@ int main()
 
                             if (opt == 2)
                             {
-                                cout <<"\nWybierz kategorię:\n";
+                                cout <<"\nWybierz kategorie:\n";
                                 wordbank.ReturnGenres();
                                 cout << "  \n  > ";
                                 cin >> genre;
                             }
-                            if (opt == 3)
-                                cout << "Gracz " << P->GetPlayer() << " wygrał!\n"; 
-
                         }while (opt != 1 && opt != 2 && opt != 3);
 
                     }while(opt != 3);
@@ -116,7 +113,7 @@ int main()
                         multiplayer1.MPlay(*P1);
                         game1.Reset();
 
-                        cout << "\nPodaj słowo dla " << player2 <<"!\n  > ";
+                        cout << "\nPodaj slowo dla " << player2 <<"!\n  > ";
                         cin >> word;
                             
                         Game game2(word);
@@ -136,15 +133,15 @@ int main()
                             cin >> opt;
 
                             if (opt != 1 && opt != 2)
-                                cout << "Podano niepoprawną opcję.\n";
+                                cout << "Podano niepoprawną opcje.\n";
 
                             if (opt == 2)
                             {
                                 cout << '\n';
                                 if (P1->GetPoints() > P2 ->GetPoints())
-                                    cout << "Gracz " << P1->GetPlayer() << " wygrał!\n"; 
+                                    cout << "Gracz " << P1->GetPlayer() << " wygral!\n"; 
                                 else if (P1->GetPoints() < P2 ->GetPoints())
-                                    cout << "Gracz " << P2->GetPlayer() << " wygrał!\n"; 
+                                    cout << "Gracz " << P2->GetPlayer() << " wygral!\n"; 
                             }
 
                         }while (opt != 1 && opt != 2);
@@ -191,7 +188,7 @@ int main()
                                     cin >> optt;
 
                                     if (optt != 1 && optt != 2)
-                                        cout << "Podano niepoprawną opcję.\n";
+                                        cout << "Podano niepoprawną opcje.\n";
 
                                 } while (optt != 1 && optt != 2);
                                 
@@ -223,13 +220,12 @@ int main()
                                     cin >> optt;
 
                                     if (optt != 1 && optt != 2)
-                                        cout << "Podano niepoprawną opcję.\n";
+                                        cout << "Podano niepoprawną opcje.\n";
 
                                 } while (optt != 1 && optt != 2);
                                 
                             } while (optt == 1);
 
-                            cout << "\033[2J\033[1;1H";
                             break;
                         }
                         case 3:
@@ -240,12 +236,11 @@ int main()
                     }
 
                     if (opt != 1 && opt != 2 && opt != 3)
-                        cout << "Podano niepoprawną opcję.\n";
+                        cout << "Podano niepoprawną opcje.\n";
 
                 }while (opt != 1 && opt != 2 && opt != 3);
 
                 break;
-                cout << "\033[2J\033[1;1H";
             }
 
             case 4:
@@ -255,7 +250,7 @@ int main()
                 cout << "Podano niepoprawną opcje.\n";
                 break;
         }
-    }while(option > 0 && option < 4);
+    }while(option != 4);
 
     return 0;
 }
