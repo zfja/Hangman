@@ -5,19 +5,17 @@ Console implementation of the classic Hangman game in C++ with object-oriented d
 ##  Features
 
 - **Multiple Game Modes:**
-  - Single Player (vs computer with word categories)
+  - Singleplayer (vs computer with random words from `.txt` categories)
   - Multiplayer (PvP with custom words)
   
 - **Advanced Gameplay:**
   - Real-time ASCII art visualization
   - Points system with streaks
   - Player statistics tracking
-  - Multiple word categories
+  - Multiple word categories in singleplayer mode
 
 - **Technical Implementation:**
-  - Object-oriented architecture with inheritance and polymorphism
   - Dynamic word category loading from `.txt` configuration files
-  - Clean, responsive console-based user interface
   - Case-insensitive input processing (all letters normalized to uppercase)
 
 **Examples with the word `"Apple"`:**
