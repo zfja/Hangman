@@ -162,7 +162,7 @@ int main()
 
                 do
                 {
-                    cout <<"\n \nWybierz opcje:\n (1) Dodaj nowa kategorie\n (2) Dodaj slowo do istniejacej kategori\n (3) Wyjdz\n  > ";
+                    cout <<"\n \nWybierz opcje:\n (1) Dodaj nowa kategorie\n (2) Dodaj slowo do istniejacej kategorii\n (3) Wyjdz\n  > ";
                     cin >> opt;
 
                     switch(opt)
@@ -244,6 +244,7 @@ int main()
                 }while (opt != 1 && opt != 2 && opt != 3);
 
                 break;
+                cout << "\033[2J\033[1;1H";
             }
 
             case 4:

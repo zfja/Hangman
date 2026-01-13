@@ -2,6 +2,8 @@
 #define GAME_H
 #include "Player.h"
 #include <cctype>
+#include <vector>
+#include <cstring>
 using namespace std;
 
 class Game

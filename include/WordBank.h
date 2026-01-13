@@ -4,6 +4,7 @@
 #include <fstream>
 #include <dirent.h>
 #include <ctime>
+#include <vector>
 using namespace std;
 
 class WordBank
