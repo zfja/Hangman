@@ -60,7 +60,7 @@ int main()
                             cin >> opt;
 
                             if (opt != 1 && opt != 2 && opt != 3)
-                                cout << "Podano niepoprawną opcję.\n";
+                                cout << "Podano niepoprawna opcje.\n";
 
                             if (opt == 2)
                             {
@@ -133,7 +133,7 @@ int main()
                             cin >> opt;
 
                             if (opt != 1 && opt != 2)
-                                cout << "Podano niepoprawną opcje.\n";
+                                cout << "Podano niepoprawna opcje.\n";
 
                             if (opt == 2)
                             {
@@ -188,7 +188,7 @@ int main()
                                     cin >> optt;
 
                                     if (optt != 1 && optt != 2)
-                                        cout << "Podano niepoprawną opcje.\n";
+                                        cout << "Podano niepoprawna opcje.\n";
 
                                 } while (optt != 1 && optt != 2);
                                 
@@ -220,7 +220,7 @@ int main()
                                     cin >> optt;
 
                                     if (optt != 1 && optt != 2)
-                                        cout << "Podano niepoprawną opcje.\n";
+                                        cout << "Podano niepoprawna opcje.\n";
 
                                 } while (optt != 1 && optt != 2);
                                 
@@ -236,7 +236,7 @@ int main()
                     }
 
                     if (opt != 1 && opt != 2 && opt != 3)
-                        cout << "Podano niepoprawną opcje.\n";
+                        cout << "Podano niepoprawna opcje.\n";
 
                 }while (opt != 1 && opt != 2 && opt != 3);
 
@@ -247,7 +247,7 @@ int main()
                 break;
 
             default:
-                cout << "Podano niepoprawną opcje.\n";
+                cout << "Podano niepoprawna opcje.\n";
                 break;
         }
     }while(option != 4);
