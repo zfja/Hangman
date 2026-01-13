@@ -1,0 +1,22 @@
+CXX = g++
+CXXFLAGS = -std=c++17 -Iinclude
+TARGET = prog
+
+SOURCES = src/Game.cpp src/main.cpp src/Multiplayer.cpp src/Player.cpp src/Singleplayer.cpp src/WordBank.cpp
+OBJECTS = $(SOURCES:.cpp=.o)
+
+all: $(TARGET)
+
+# REGUŁA DLA PLIKU WYKONYWALNEGO
+$(TARGET): $(OBJECTS)
+	$(CXX) $(OBJECTS) -o $(TARGET)
+
+# REGUŁA DLA PLIKÓW .o - BRAKUJĄCA!
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+clean:
+	rm -f $(TARGET) $(OBJECTS)
+
+run: $(TARGET)
+	./$(TARGET)
