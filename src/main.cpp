@@ -8,7 +8,7 @@ int main()
 {
     int option = 0;
     string player, word ;
-    cout << "\033[2J\033[1;1H";
+    cout << "\033[2J\033[1;1H"; // czysci terminal
 
     do
     {
@@ -21,7 +21,7 @@ int main()
                 {
                     int opt;
                     int genre;
-                    float p;
+                    float p; // punkty
                 
                     Player *P(nullptr);
                     cout << "\nPodaj nazwe gracza: \n  > ";

@@ -18,7 +18,7 @@ void Multiplayer::MPlay(Player& player)
         Play(letter); //gra wisielec
         player.SetPoints(GetPointsCounter()); // przypisanie punktow
 
-        int result = IsWon(letter);
+        int result = IsWon(letter); // jak jest ten -1 to ignoruje i nie wchodzi jak w game opisane
 
         if (result == 1)  
         {
@@ -33,13 +33,13 @@ void Multiplayer::MPlay(Player& player)
     }
 }
 
-void Multiplayer::MStats(Player player1, Player player2)
+void Multiplayer::MStats(Player player1, Player player2) // wiem ze to moglam dac do player ale chcialam miec logiki gry oddzielone i to troche na sile klasy
 {
-    system("clear");
+    cout << "\033[2J\033[1;1H";
     cout << "\n \n   ";
     cout << player1.GetPlayer() << "\n ";
     cout << "punkty skumulowane: " << player1.GetPoints() << "\n ";
-    if (player1.GetStreak() != 0)
+    if (player1.GetStreak() != 0) //wypisuje tylko przy streaku
         cout << "streak: " <<player1.GetStreak() << "\n  ";
         
     cout << "\n   ";

@@ -14,7 +14,7 @@ void Player::SetPoints(float points)
     this->points = points;
 }
 
-void Player::SetStreak(int IsWon)
+void Player::SetStreak(int IsWon) // przujmuje to czy wygrana i streak na bazie tego zlicza
 {
     if (IsWon == 1)
         streak += 1;

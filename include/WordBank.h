@@ -2,7 +2,7 @@
 #define WORDBANK_H
 #include <iostream>
 #include <fstream>
-#include <dirent.h>
+#include <dirent.h> // biblioteka do otwierania plikow
 #include <ctime>
 #include <vector>
 using namespace std;
